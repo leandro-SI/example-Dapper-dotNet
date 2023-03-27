@@ -1,5 +1,6 @@
 ﻿using Dapper;
 using DemoDapper.API.Domain;
+using Microsoft.Extensions.Configuration;
 using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
@@ -12,9 +13,9 @@ namespace DemoDapper.API.Repository
     {
         private readonly string _connectionString;
 
-        public PessoaRepository(string connectionString)
+        public PessoaRepository(IConfiguration configuration)
         {
-            _connectionString = connectionString;
+            _connectionString = configuration.GetConnectionString("DapperDataServer");
         }
 
         public IEnumerable<Pessoa> ListAll()
