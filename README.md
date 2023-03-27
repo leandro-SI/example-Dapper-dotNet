@@ -3,9 +3,9 @@ Exemplo de persistência utilizando o ORM Dapper com .Net
 
 <br>
 
-* Script SQL Server:
-<code>
+## Scripts SQL Server
 
+```
 CREATE DATABASE DemoDapper
 
 USE DemoDapper
@@ -17,5 +17,8 @@ CREATE TABLE Pessoa(
 	DataRegistro DATETIME DEFAULT GETDATE()
 )
 
-</code>
+```
+
+
+
 
